@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <% let thisPage = 'index'; %>
+    @@include('./_cms-assets.ejs.html')
+    @@include('./_head.ejs.html')
+  </head>
+
+  <body class="">
+    @@include('./_index-content.ejs.html')
+
+    <!-- Global/external scripts -->
+    <% if (config.js && config.js.globals) { config.js.globals.forEach(function(s) { %>
+      <script src="<%= s %>"></script>
+    <% }); } %>
+
+    <!-- Scripts -->
+    <script src="./app.bundle.js"></script>
+  </body>
+</html>
