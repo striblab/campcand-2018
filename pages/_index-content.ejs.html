@@ -1,8 +1,124 @@
 
 <div class="strib strib-styles strib-styles-specifically">
-  <section class="container-lg">
-    <p>Content goes here.</p>
-  </section>
+  <div class="container-lg headerCF">
+  	<h5 class="font-popular-light"><span  class="font-popular-medium">Election 2018</span> Candidates</h5>
+  	<h1>Who's running for office?</h1>
+  	<p class="byline">By Star Tribune Staff</p>
+  	<!-- share -->
+  </div>
+
+  <div class="container-lg mainCF">
+  	<!-- NAVIGATION -->
+    <nav>
+      <ul>
+    	<li><a href="#G">GOVERNOR</a></li>
+        <li><a href="#S">U.S. SENATE</a></li>
+    	<li><a href="#H">U.S. HOUSE</a></li>
+      </ul>
+  	</nav>
+
+    <!-- LEAD IN TEXT -->
+    <section class="leadin">
+      <p>Lorem ipsum lots of lead in non-sense goes here about the candidates, and maybe with some verbal direction for using this page? </p>
+    </section>
+
+    <!-- GOV -->
+  	<section>
+  		<h4>Governor's race</h4>
+  		<p class="timestamp">May 17, 2018</p>
+      <p>Tims Walz and Pawlenty are fundraising frontrunners so far, but there are four other candidates in this race that folks should know about.</p>
+      <div class="key">
+        
+      </div>
+
+  		<table>
+        <thead>
+	    	<tr>
+	    		<th class="party"></th>
+	    		<th class="candName"></th>
+	    	</tr>
+        </thead>
+
+        <tbody>
+      		<tr class="<%= g.party %> <%= g.out === '1' ? 'out' : '' %> <%= i > 9 ? 'nest' : '' %>">
+      			<td class="party"><span></span></td>
+      			<td class="candName"><%= g.firstname %> <%= g.lastname %> <span></span></td>
+      		</tr>
+        </tbody>
+  		</table>
+
+      <div class="footnote">
+        <p></p>
+      </div>
+  	</section>
+
+    <!-- SENATE -->
+  	<section>
+  		<h4>Senate races</h4>
+	  		<p class="timestamp">May 17, 2018</p>
+	      	<p>Tina Smith something something.</p>
+	      <div class="key">
+	        
+	      </div>
+
+  		<table>
+        <thead>
+	    	<tr>
+	    		<th class="party"></th>
+	    		<th class="candName"></th>
+	    	</tr>
+        </thead>
+
+        <tbody>
+      		<tr class="<%= g.party %> <%= g.out === '1' ? 'out' : '' %> <%= i > 9 ? 'nest' : '' %>">
+      			<td class="party"><span></span></td>
+      			<td class="candName"><%= g.firstname %> <%= g.lastname %> <span></span></td>
+      		</tr>
+        </tbody>
+  		</table>
+
+      <div class="footnote">
+        <p></p>
+      </div>
+  	</section>
+
+    <!-- HOUSE -->
+  	<section>
+  		<h4>House races</h4>
+  		<p class="timestamp">May 17, 2018</p>
+      <p>Districts 1, 3 and 8 are ones to watch.</p>
+      <div class="key">
+        
+      </div>
+
+  		<table>
+        <thead>
+	    	<tr>
+	    		<th class="party"></th>
+	    		<th class="candName"></th>
+	    	</tr>
+        </thead>
+
+        <tbody>
+      		<tr class="<%= g.party %> <%= g.out === '1' ? 'out' : '' %> <%= i > 9 ? 'nest' : '' %>">
+      			<td class="party"><span></span></td>
+      			<td class="candName"><%= g.firstname %> <%= g.lastname %> <span></span></td>
+      		</tr>
+        </tbody>
+  		</table>
+
+      <div class="footnote">
+        <p></p>
+      </div>
+  	</section>
+
+    <!-- FOOTER/SOURCES -->
+    <footer>
+      <p>Note: Fundraising and spending totals reflect money raised and spent in 2017 and 2018. Candidates who raised less than $1,000 during this cycle or did not have active campaigns in 2018 are not included.</p>
+      <p>Source: <a href="https://cfb.mn.gov/reports-and-data/viewers/campaign-finance/districts-constitutional-offices/GOV/2018/">Minnesota Campaign Finance Board</a></p>
+    </footer>
+  </div>
+
 </div>
 
 
