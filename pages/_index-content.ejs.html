@@ -28,7 +28,7 @@
   		<p class="timestamp">May 17, 2018</p>
       <p>Tims Walz and Pawlenty are fundraising frontrunners so far, but there are four other candidates in this race that folks should know about.</p>
       <div class="key">
-        
+
       </div>
 
   		<table>
@@ -40,10 +40,12 @@
         </thead>
 
         <tbody>
-      		<tr class="<%= g.party %> <%= g.out === '1' ? 'out' : '' %> <%= i > 9 ? 'nest' : '' %>">
-      			<td class="party"><span></span></td>
-      			<td class="candName"><%= g.firstname %> <%= g.lastname %> <span></span></td>
-      		</tr>
+          <% _.each(governors, (g) => { %>
+            <tr class="<%= g.party %>">
+              <td class="party"><%= g.party %><span></span></td>
+              <td class="candName"><%= g['FIRST NAME'] %> <%= g['LAST NAME'] %> <span></span></td>
+            </tr>
+          <% }) %>
         </tbody>
   		</table>
 
@@ -58,7 +60,7 @@
 	  		<p class="timestamp">May 17, 2018</p>
 	      	<p>Tina Smith something something.</p>
 	      <div class="key">
-	        
+
 	      </div>
 
   		<table>
@@ -70,10 +72,12 @@
         </thead>
 
         <tbody>
-      		<tr class="<%= g.party %> <%= g.out === '1' ? 'out' : '' %> <%= i > 9 ? 'nest' : '' %>">
-      			<td class="party"><span></span></td>
-      			<td class="candName"><%= g.firstname %> <%= g.lastname %> <span></span></td>
-      		</tr>
+          <% _.each(senate, (s) => { %>
+            <tr class="<%= s.party %>">
+              <td class="party"><%= s.party %><span></span></td>
+              <td class="candName"><%= s['FIRST NAME'] %> <%= s['LAST NAME'] %> <span></span></td>
+            </tr>
+          <% }) %>
         </tbody>
   		</table>
 
@@ -88,7 +92,7 @@
   		<p class="timestamp">May 17, 2018</p>
       <p>Districts 1, 3 and 8 are ones to watch.</p>
       <div class="key">
-        
+
       </div>
 
   		<table>
@@ -100,9 +104,9 @@
         </thead>
 
         <tbody>
-      		<tr class="<%= g.party %> <%= g.out === '1' ? 'out' : '' %> <%= i > 9 ? 'nest' : '' %>">
+      		<tr class="">
       			<td class="party"><span></span></td>
-      			<td class="candName"><%= g.firstname %> <%= g.lastname %> <span></span></td>
+      			<td class="candName"><span></span></td>
       		</tr>
         </tbody>
   		</table>
