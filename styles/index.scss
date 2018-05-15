@@ -21,4 +21,205 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
 // Project specific styles.  Split styles into files per component
 .strib.strib-styles.strib-styles-specifically {
 @import 'project';
+
+// Header styles
+
+  .headerCC {
+    text-align: center;
+    max-width: 825px;
+  }
+
+  .headerCC h1 {
+    padding-top: 0.3em;
+    line-height: 1.1em;
+  }
+
+  .headerCC h5, .headerCC h5 span {
+    text-transform: uppercase;
+    font-size: .9em;
+    letter-spacing: .08em;
+    padding-top: 40px;
+  }
+
+  .headerCC h5 span{
+    font-size: .96em;
+    letter-spacing: .1em;
+  }
+
+  .headerCC h5 span,
+  .headerCC .byline {
+    font-weight: bold;
+  }
+
+  .headerCC .byline span {
+    font-weight: normal;
+  }
+
+  .mainCC {
+    max-width: 525px;
+  }
+
+
+// Nav styles
+
+  nav {
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin: 40px auto 25px auto;
+  }
+
+  nav ul li{
+    min-width: 20%;
+    background-color: white;
+    text-transform: uppercase;
+    font-size: 0.75em;
+    font-family: 'Benton Sans';
+    border: 1px solid #C0C0C0;
+    border-radius: 6px;
+    padding: 5px 10px 4px 10px;
+    margin-right: 15px;
+    display: inline;
+  }
+
+  nav ul li a, nav ul li a:link, nav ul li a:visited{
+    color: #C0C0C0;
+  }
+
+  nav ul li:last-child {
+    margin-right: 0;
+  }
+
+  nav ul li.current {
+   color: #080808;
+   border: 1px solid #080808;
+ }
+
+   nav ul li.current a{
+   color: #080808;
+ }
+
+  nav ul li:hover{
+   color: #666;
+   border: 1px solid #666;
+   cursor: pointer;
+ }
+
+  nav ul li:hover a {
+   color: #666;
+ }
+
+
+// Module styles
+
+  section {
+    margin-bottom: 60px;
+  }
+
+  section.leadin{
+    padding-top: 30px;
+    margin-bottom: 45px;
+  }
+
+  section h4{
+    font-size: 1.1em;
+  }
+
+  section p {
+    font-family: 'Benton Sans';
+    font-size: 0.9em;
+    padding-top: 5px;
+  }
+
+  section p.timestamp {
+    text-transform: uppercase;
+    font-size: 0.6em;
+    text-align: right;
+    margin-top: -32px;
+  }
+
+  section div.key{
+  	margin-bottom: 20px;
+  }
+
+  section ul{
+  	margin: 0;
+  }
+
+  section ul li{
+  	margin-bottom: 20px;
+  	clear: both;
+  }
+
+  ul li h6{
+  	margin-bottom: 0;
+  }
+
+  ul li .DFL span.party, ul li .R span.party, ul li .I span.party {
+    width: 14px;
+    height: 14px;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+    display: inline-block;
+    margin-left: 10px;
+  }
+
+  ul li .DFL span.party{
+    background-color: #0258A0;
+  }
+
+  ul li .R span.party {
+    background-color: #C0272D;
+  }
+
+  ul li .I span.party {
+    background-color: #fee090;
+  }
+
+  ul li .expand img{
+  	float:right;
+  	padding: 0 0 10px 10px;
+  	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%) contrast(120%);
+  }
+
+  ul li .expand p:first-child{
+  	padding-top: 0;
+  }
+
+
+// Button expanders
+
+section ul li button{
+    background-color: white;
+    border: none;
+    font-size: 0.65em;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    float: left;
+  }
+
+  section ul li button:hover{
+
+  }
+
+  section ul li button.more,
+  section ul li button.less {
+    font-size: 1.2em;
+    font-weight: normal;
+    color: black;
+  }
+
+  section ul li button.less {
+    display: none;
+  }
+
+
+
+
+
 }
+
+

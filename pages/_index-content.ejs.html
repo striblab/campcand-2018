@@ -1,19 +1,19 @@
 
 <div class="strib strib-styles strib-styles-specifically">
-  <div class="container-lg headerCF">
+  <div class="container-lg headerCC">
   	<h5 class="font-popular-light"><span  class="font-popular-medium">Election 2018</span> Candidates</h5>
   	<h1>Who's running for office?</h1>
   	<p class="byline">By Star Tribune Staff</p>
   	<!-- share -->
   </div>
 
-  <div class="container-lg mainCF">
+  <div class="container-lg mainCC">
   	<!-- NAVIGATION -->
     <nav>
       <ul>
-    	<li><a href="#G">GOVERNOR</a></li>
+      	<li><a href="#G">GOVERNOR</a></li>
         <li><a href="#S">U.S. SENATE</a></li>
-    	<li><a href="#H">U.S. HOUSE</a></li>
+      	<li><a href="#H">U.S. HOUSE</a></li>
       </ul>
   	</nav>
 
@@ -27,30 +27,26 @@
   		<h4>Governor's race</h4>
   		<p class="timestamp">May 17, 2018</p>
       <p>Tims Walz and Pawlenty are fundraising frontrunners so far, but there are four other candidates in this race that folks should know about.</p>
-      <div class="key">
+      <div class="key">      </div>
 
-      </div>
-
-  		<table>
-        <thead>
-	    	<tr>
-	    		<th class="party"></th>
-	    		<th class="candName"></th>
-	    	</tr>
-        </thead>
-
-        <tbody>
-          <% _.each(governors, (g) => { %>
-            <tr class="<%= g.party %>">
-              <td class="party"><%= g.party %><span></span></td>
-              <td class="candName"><%= g['FIRST NAME'] %> <%= g['LAST NAME'] %> <span></span></td>
-            </tr>
-          <% }) %>
-        </tbody>
-  		</table>
+      <ul>
+        <% _.each(governors, (g) => { %>
+        <li>
+<!--           <button class="more">+</button>
+          <button class="less">-</button> -->
+          <h6 class="<%= g.PARTY %>"><%= g['FIRST NAME'] %> <%= g['LAST NAME'] %><span class="party"></span><span class="inc"></span><span class="endorse"></span></h6>
+          <div class="expand">
+            <img src="http://www.placepuppy.net/100/100">
+            <p><em>Currently: <%= g['CURRENT GIG'] %></em></p>
+            <p><%= g['BIO'] %></p>
+          </div>
+        </li>
+        <% }) %>
+      </ul>
 
       <div class="footnote">
-        <p></p>
+        <p>Other candidates: Lance Johnson, Chris Wright, Ole Savior.</p>
+        <p>Fordmer candidates: Chris Coleman, Matt Dean, Keith Downey, Tina Liebling, David Osmek, Paul Thissen.</p>
       </div>
   	</section>
 
