@@ -24,9 +24,8 @@
 
     <!-- GOV -->
   	<section>
-  		<h4>Governor's race</h4>
+  		<h4>GOVERNOR</h4>
   		<p class="timestamp">May 17, 2018</p>
-      <p>Tims Walz and Pawlenty are fundraising frontrunners so far, but there are four other candidates in this race that folks should know about.</p>
       <div class="key">      </div>
 
       <ul>
@@ -37,8 +36,9 @@
           <h6 class="<%= g.PARTY %>"><%= g['FIRST NAME'] %> <%= g['LAST NAME'] %><span class="party"></span><span class="inc"></span><span class="endorse"></span></h6>
           <div class="expand">
             <img src="http://www.placepuppy.net/100/100">
-            <p><em>Currently: <%= g['CURRENT GIG'] %></em></p>
+<!--             <p><em>Currently: <%= g['CURRENT GIG'] %></em></p> -->
             <p><%= g['BIO'] %></p>
+            <p class="site"><a href="<%= g['WEBSITE'] %>" target="_blank" rel="noopener">Website</a></p>
           </div>
         </li>
         <% }) %>
@@ -46,36 +46,34 @@
 
       <div class="footnote">
         <p>Other candidates: Lance Johnson, Chris Wright, Ole Savior.</p>
-        <p>Fordmer candidates: Chris Coleman, Matt Dean, Keith Downey, Tina Liebling, David Osmek, Paul Thissen.</p>
+        <p>Former candidates: Chris Coleman, Matt Dean, Keith Downey, Tina Liebling, David Osmek, Paul Thissen.</p>
       </div>
   	</section>
 
     <!-- SENATE -->
   	<section>
-  		<h4>Senate races</h4>
-	  		<p class="timestamp">May 17, 2018</p>
-	      	<p>Tina Smith something something.</p>
-	      <div class="key">
-
-	      </div>
-
-  		<table>
-        <thead>
-	    	<tr>
-	    		<th class="party"></th>
-	    		<th class="candName"></th>
-	    	</tr>
-        </thead>
-
-        <tbody>
-          <% _.each(senate, (s) => { %>
-            <tr class="<%= s.party %>">
-              <td class="party"><%= s.party %><span></span></td>
-              <td class="candName"><%= s['FIRST NAME'] %> <%= s['LAST NAME'] %> <span></span></td>
-            </tr>
+  		<h4>SENATE</h4>
+	  		<p class="timestamp">Updated: May 17, 2018</p>
+	      <div class="key">	      </div>
+        <ul>
+        <% _.each(senate, (s) => { %>
+        <li>
+      <!--  <button class="more">+</button>
+            <button class="less">-</button> -->
+            <h6 class="<%= s.PARTY %>"><%= s['FIRST NAME'] %> <%= s['LAST NAME'] %>
+              <span class="party"></span>
+              <% if (s['INCUMBENT Y/N'] === 'Y') { %><span class="incumbent">(i)</span><% } %>
+              <span class="endorse"></span>
+            </h6>
+            <div class="expand">
+              <img src="http://www.placepuppy.net/100/100">
+              <p><em>Currently: <%= s['CURRENT GIG'] %></em></p>
+              <p><%= s['BIO'] %></p>
+              <p class="site"><a href="<%= s['WEBSITE'] %>" target="_blank" rel="noopener">Website</a></p>
+            </div>
+          </li>
           <% }) %>
-        </tbody>
-  		</table>
+        </ul>
 
       <div class="footnote">
         <p></p>
@@ -84,28 +82,11 @@
 
     <!-- HOUSE -->
   	<section>
-  		<h4>House races</h4>
-  		<p class="timestamp">May 17, 2018</p>
-      <p>Districts 1, 3 and 8 are ones to watch.</p>
-      <div class="key">
+  		<h4>HOUSE</h4>
+  		<p class="timestamp">Updated May 17, 2018</p>
+      <div class="key">      </div>
 
-      </div>
 
-  		<table>
-        <thead>
-	    	<tr>
-	    		<th class="party"></th>
-	    		<th class="candName"></th>
-	    	</tr>
-        </thead>
-
-        <tbody>
-      		<tr class="">
-      			<td class="party"><span></span></td>
-      			<td class="candName"><span></span></td>
-      		</tr>
-        </tbody>
-  		</table>
 
       <div class="footnote">
         <p></p>
@@ -114,8 +95,6 @@
 
     <!-- FOOTER/SOURCES -->
     <footer>
-      <p>Note: Fundraising and spending totals reflect money raised and spent in 2017 and 2018. Candidates who raised less than $1,000 during this cycle or did not have active campaigns in 2018 are not included.</p>
-      <p>Source: <a href="https://cfb.mn.gov/reports-and-data/viewers/campaign-finance/districts-constitutional-offices/GOV/2018/">Minnesota Campaign Finance Board</a></p>
     </footer>
   </div>
 

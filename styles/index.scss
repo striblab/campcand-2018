@@ -151,10 +151,6 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
   	clear: both;
   }
 
-  ul li h6{
-  	margin-bottom: 0;
-  }
-
   ul li .DFL span.party, ul li .R span.party, ul li .I span.party {
     width: 14px;
     height: 14px;
@@ -177,6 +173,10 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
     background-color: #fee090;
   }
 
+  ul li .expand{
+  //	display: none;
+  }
+
   ul li .expand img{
   	float:right;
   	padding: 0 0 10px 10px;
@@ -184,7 +184,7 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
     filter: grayscale(100%) contrast(120%);
   }
 
-  ul li .expand p:first-child{
+  ul li .expand p{
   	padding-top: 0;
   }
 
@@ -216,9 +216,14 @@ section ul li button{
     display: none;
   }
 
+.footnote p{
+    font-family: 'Benton Sans';
+    font-size: .7em;
+  }
 
-
-
+footer{
+	font-size: .8em;
+}
 
 }
 
