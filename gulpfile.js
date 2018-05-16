@@ -58,7 +58,9 @@ gulp.task('html', async () => {
     senate:
       'https://docs.google.com/spreadsheets/d/e/2PACX-1vRXXeiHdjCfcvfqyPnfunfwNcCqcx3VLLPAvL5VqnQDQq1H2IjAOkR79I2Ubf_MuP-AgW6wUpzMNK_O/pub?gid=1219945302&single=true&output=csv',
     senateSpecial:
-      'https://docs.google.com/spreadsheets/d/e/2PACX-1vRXXeiHdjCfcvfqyPnfunfwNcCqcx3VLLPAvL5VqnQDQq1H2IjAOkR79I2Ubf_MuP-AgW6wUpzMNK_O/pub?gid=444380822&single=true&output=csv'
+      'https://docs.google.com/spreadsheets/d/e/2PACX-1vRXXeiHdjCfcvfqyPnfunfwNcCqcx3VLLPAvL5VqnQDQq1H2IjAOkR79I2Ubf_MuP-AgW6wUpzMNK_O/pub?gid=444380822&single=true&output=csv',
+    house:
+      'https://docs.google.com/spreadsheets/d/e/2PACX-1vRXXeiHdjCfcvfqyPnfunfwNcCqcx3VLLPAvL5VqnQDQq1H2IjAOkR79I2Ubf_MuP-AgW6wUpzMNK_O/pub?gid=1149555105&single=true&output=csv'
   });
 
   return gulp

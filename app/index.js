@@ -17,3 +17,17 @@ import utilsFn from './utils.js';
 
 // Setup utils function
 utilsFn({ });
+
+//jquery accordion
+// $(document).ready(function(){
+
+// 	$( function() {
+// 	    $( ".accordion" ).accordion({
+// 	    	header: "h6",
+// 	    	collapsible: true,
+// 	    	heightStyle: "content"
+
+// 	    });
+// 	} );
+
+// });
