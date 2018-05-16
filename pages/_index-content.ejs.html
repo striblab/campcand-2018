@@ -66,7 +66,7 @@
               <span class="endorse"></span>
             </h6>
             <div class="expand">
-              <img src="http://www.placepuppy.net/100/100">
+              <img src="https://placebear.com/100/100">
 <!--               <p><em>Currently: <%= s['CURRENT GIG'] %></em></p>
  -->              <p><%= s['BIO'] %></p>
               <p class="extras"><a href="<%= s['WEBSITE'] %>" target="_blank" rel="noopener">Website</a> | <a href="http://www.startribune.com/campaign-finance-2018-minnesota-us-senate-races-tina-smith-amy-klobuchar-fundraising-juggernauts-in-full-swing/478994853/" target="_blank" rel="noopener">Latest financials</a></p>
@@ -75,6 +75,7 @@
           <% }) %>
         </ul>
 
+        <h5>Senate (Special)</h5>
         <ul>
         <% _.each(senateSpecial, (ss) => { %>
         <li>
@@ -86,7 +87,7 @@
               <span class="endorse"></span>
             </h6>
             <div class="expand">
-              <img src="http://www.placepuppy.net/100/100">
+              <img src="https://www.fillmurray.com/100/100">
 <!--               <p><em>Currently: <%= ss['CURRENT GIG'] %></em></p>
  -->              <p><%= ss['BIO'] %></p>
               <p class="extras"><a href="<%= ss['WEBSITE'] %>" target="_blank" rel="noopener">Website</a> | <a href="http://www.startribune.com/campaign-finance-2018-minnesota-us-senate-races-tina-smith-amy-klobuchar-fundraising-juggernauts-in-full-swing/478994853/" target="_blank" rel="noopener">Latest financials</a></p>
@@ -106,8 +107,10 @@
   		<p class="timestamp">Updated May 17, 2018</p>
       <div class="key">      </div>
 
+      <% _.each(_.groupBy(house, 'DISTRICT'), h => { %>
+      <h5>District <%= h[0].DISTRICT %></h5>
       <ul>
-        <% _.each(house, (h) => { %>
+        <% _.each(h, (h) => { %>
         <li>
       <!--  <button class="more">+</button>
             <button class="less">-</button> -->
@@ -117,7 +120,7 @@
               <span class="endorse"></span>
             </h6>
             <div class="expand">
-              <img src="http://www.placepuppy.net/100/100">
+              <img src="http://www.placekitten.com/100/100">
 <!--               <p><em>Currently: <%= h['CURRENT GIG'] %></em></p>
  -->              <p><%= h['BIO'] %></p>
               <p class="extras"><a href="<%= h['WEBSITE'] %>" target="_blank" rel="noopener">Website</a> | <a href="http://www.startribune.com/campaign-finance-2018-minnesota-us-senate-races-tina-smith-amy-klobuchar-fundraising-juggernauts-in-full-swing/478994853/" target="_blank" rel="noopener">Latest financials</a></p>
@@ -125,7 +128,7 @@
           </li>
           <% }) %>
         </ul>
-
+        <% }) %>
 
       <div class="footnote">
         <p></p>
