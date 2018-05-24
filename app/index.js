@@ -18,16 +18,22 @@ import utilsFn from './utils.js';
 // Setup utils function
 utilsFn({ });
 
-//jquery accordion
-// $(document).ready(function(){
+//slide function
+$(document).ready(function(){
+    $(".more").click(function(){
+    	var parent = $(this).parent()
+    	parent.find('.expand').slideDown(300,function(){
+	    	parent.find(".more").hide();
+	    	parent.find(".less").show();
+        	});
+    });
 
-// 	$( function() {
-// 	    $( ".accordion" ).accordion({
-// 	    	header: "h6",
-// 	    	collapsible: true,
-// 	    	heightStyle: "content"
+    $(".less").click(function(){
+        var parent = $(this).parent()
+        parent.find('.expand').slideUp(500,function(){
+        	parent.find(".less").hide();
+        	parent.find(".more").show();
+        	});
+    });
 
-// 	    });
-// 	} );
-
-// });
+});

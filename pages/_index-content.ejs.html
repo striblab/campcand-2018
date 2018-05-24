@@ -25,20 +25,20 @@
     <!-- GOV -->
   	<section id="G">
   		<h4>GOVERNOR</h4>
-  		<p class="timestamp">May 17, 2018</p>
       <div class="key">      </div>
 
       <ul>
         <% _.each(governors, (g) => { %>
         <li>
-<!--           <button class="more">+</button>
-          <button class="less">-</button> -->
-          <h6 class="<%= g.PARTY %>"><%= g['FIRST NAME'] %> <%= g['LAST NAME'] %><span class="party"></span><span class="inc"></span><span class="endorse"></span></h6>
+            <button class="more">+</button>
+            <button class="less">&minus;</button>
+            <h6 class="<%= g.PARTY %>"><%= g['FIRST NAME'] %> <%= g['LAST NAME'] %><span class="party"></span><span class="inc"></span><span class="endorse"></span></h6>
+
           <div class="expand">
             <img src="http://www.placepuppy.net/100/100">
 <!--             <p><em>Currently: <%= g['CURRENT GIG'] %></em></p> -->
             <p><%= g['BIO'] %></p>
-            <p class="extras"><a href="<%= g['WEBSITE'] %>" target="_blank" rel="noopener">Website</a> | <a href="http://www.startribune.com/campaign-finance-2018-minnesota-governor-tim-walz-leads-money-race-tim-pawlenty-close-behind/478334513/" target="_blank" rel="noopener">Latest financials</a></p>
+            <p class="extras"><a href="<%= g['WEBSITE'] %>" target="_blank" rel="noopener">Website</a> | <a href="http://www.startribune.com/campaign-finance-2018-minnesota-governor-tim-walz-leads-money-race-tim-pawlenty-close-behind/478334513/" target="_blank" rel="noopener">Campaign finance</a></p>
           </div>
         </li>
         <% }) %>
@@ -53,13 +53,12 @@
     <!-- SENATE -->
   	<section>
   		<h4>SENATE</h4>
-	  		<p class="timestamp">Updated: May 17, 2018</p>
 	      <div class="key">	      </div>
         <ul>
         <% _.each(senate, (s) => { %>
         <li>
-      <!--  <button class="more">+</button>
-            <button class="less">-</button> -->
+            <button class="more">+</button>
+            <button class="less">&minus;</button>
             <h6 class="<%= s.PARTY %>"><%= s['FIRST NAME'] %> <%= s['LAST NAME'] %>
               <span class="party"></span>
               <% if (s['INCUMBENT Y/N'] === 'Y') { %><span class="incumbent">(i)</span><% } %>
@@ -69,18 +68,21 @@
               <img src="https://placebear.com/100/100">
 <!--               <p><em>Currently: <%= s['CURRENT GIG'] %></em></p>
  -->              <p><%= s['BIO'] %></p>
-              <p class="extras"><a href="<%= s['WEBSITE'] %>" target="_blank" rel="noopener">Website</a> | <a href="http://www.startribune.com/campaign-finance-2018-minnesota-us-senate-races-tina-smith-amy-klobuchar-fundraising-juggernauts-in-full-swing/478994853/" target="_blank" rel="noopener">Latest financials</a></p>
+              <p class="extras"><a href="<%= s['WEBSITE'] %>" target="_blank" rel="noopener">Website</a> | <a href="http://www.startribune.com/campaign-finance-2018-minnesota-us-senate-races-tina-smith-amy-klobuchar-fundraising-juggernauts-in-full-swing/478994853/" target="_blank" rel="noopener">Campaign finance</a></p>
             </div>
           </li>
           <% }) %>
         </ul>
+        <div class="footnote">
+          <p>Other candidates: Robert Barnheiser.</p>
+        </div>
 
         <h5>Senate (Special)</h5>
         <ul>
         <% _.each(senateSpecial, (ss) => { %>
         <li>
-      <!--  <button class="more">+</button>
-            <button class="less">-</button> -->
+            <button class="more">+</button>
+            <button class="less">&minus;</button>
             <h6 class="<%= ss.PARTY %>"><%= ss['FIRST NAME'] %> <%= ss['LAST NAME'] %>
               <span class="party"></span>
               <% if (ss['INCUMBENT Y/N'] === 'Y') { %><span class="incumbent">(i)</span><% } %>
@@ -90,7 +92,7 @@
               <img src="https://www.fillmurray.com/100/100">
 <!--               <p><em>Currently: <%= ss['CURRENT GIG'] %></em></p>
  -->              <p><%= ss['BIO'] %></p>
-              <p class="extras"><a href="<%= ss['WEBSITE'] %>" target="_blank" rel="noopener">Website</a> | <a href="http://www.startribune.com/campaign-finance-2018-minnesota-us-senate-races-tina-smith-amy-klobuchar-fundraising-juggernauts-in-full-swing/478994853/" target="_blank" rel="noopener">Latest financials</a></p>
+              <p class="extras"><a href="<%= ss['WEBSITE'] %>" target="_blank" rel="noopener">Website</a> | <a href="http://www.startribune.com/campaign-finance-2018-minnesota-us-senate-races-tina-smith-amy-klobuchar-fundraising-juggernauts-in-full-swing/478994853/" target="_blank" rel="noopener">Campaign finance</a></p>
             </div>
           </li>
           <% }) %>
@@ -104,7 +106,6 @@
     <!-- HOUSE -->
   	<section>
   		<h4>HOUSE</h4>
-  		<p class="timestamp">Updated May 17, 2018</p>
       <div class="key">      </div>
 
       <% _.each(_.groupBy(house, 'DISTRICT'), h => { %>
@@ -112,18 +113,19 @@
       <ul>
         <% _.each(h, (h) => { %>
         <li>
-      <!--  <button class="more">+</button>
-            <button class="less">-</button> -->
+          
+          <button class="more">+</button>
+          <button class="less">&minus;</button>
             <h6 class="<%= h.PARTY %>"><%= h['FIRST NAME'] %> <%= h['LAST NAME'] %>
               <span class="party"></span>
               <% if (h['INCUMBENT Y/N'] === 'Y') { %><span class="incumbent">(i)</span><% } %>
-              <span class="endorse"></span>
+              <% if (h['PARTY ENDORSED?'] === 'Y') { %><span class="endorse">check</span><% } %>
             </h6>
             <div class="expand">
               <img src="http://www.placekitten.com/100/100">
 <!--               <p><em>Currently: <%= h['CURRENT GIG'] %></em></p>
  -->              <p><%= h['BIO'] %></p>
-              <p class="extras"><a href="<%= h['WEBSITE'] %>" target="_blank" rel="noopener">Website</a> | <a href="http://www.startribune.com/campaign-finance-2018-minnesota-us-senate-races-tina-smith-amy-klobuchar-fundraising-juggernauts-in-full-swing/478994853/" target="_blank" rel="noopener">Latest financials</a></p>
+              <p class="extras"><a href="<%= h['WEBSITE'] %>" target="_blank" rel="noopener">Website</a> | <a href="http://www.startribune.com/campaign-finance-2018-minnesota-us-senate-races-tina-smith-amy-klobuchar-fundraising-juggernauts-in-full-swing/478994853/" target="_blank" rel="noopener">Campaign finance</a></p>
             </div>
           </li>
           <% }) %>
