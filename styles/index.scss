@@ -113,24 +113,26 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
   }
 
   section h4{
-    font-size: 1.3em;
+    font-size: 1.1em;
   }
 
   section h5{
-    font-size: .9em;
+    font-size: .7em;
     text-transform: uppercase;
     color: #666;
     font-weight: normal;
   }
 
   section h6{
-    font-size: 1em;
+    font-size: .9em;
+    font-weight: bold;
     display: inline;
   }
 
   section p {
     font-family: 'Benton Sans';
     font-size: 0.9em;
+    margin-bottom: .4em;
   }
 
   section div.key{
@@ -142,8 +144,19 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
   }
 
   section ul li{
-  	margin-bottom: 20px;
+    border-bottom: 1px solid #EEEEEE;
+  	padding-bottom: 10px;
+    margin-bottom: 10px;
   	clear: both;
+  }
+
+  section ul li:first-child{
+    padding-top: 10px;
+    border-top: 3px solid #EEEEEE;
+  }
+
+  section ul li:last-child{
+    margin-bottom: 20px;
   }
 
   ul li .DFL span.party, ul li .R span.party, ul li .I span.party {
@@ -153,7 +166,8 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
     -webkit-border-radius: 7px;
     border-radius: 7px;
     display: inline-block;
-    margin-left: 10px;
+    margin-left: 7px;
+    margin-right: 7px;
   }
 
   ul li .DFL span.party{
@@ -170,11 +184,21 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
 
   ul li span.incumbent{
     font-weight: normal;
-    font-size: .9em;
+    font-size: .8em;
+  }
+
+  ul li .buttons{
+    float: right;
+  }
+
+  ul li .name{
+    clear: both;
   }
 
   ul li .expand{
   	display: none;
+    margin-bottom: 15px;
+    padding-top: 10px;
   }
 
   ul li .expand img{
@@ -182,10 +206,6 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
   	padding: 0 0 10px 10px;
   	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
     filter: grayscale(100%) contrast(120%);
-  }
-
-  ul li .expand p:first-child{
-    margin-bottom: .7em;
   }
 
   ul li .expand .extras{
@@ -201,8 +221,6 @@ section ul li button{
     min-width: 1.2em;
     background-color: white;
     border: none;
-    font-size: 0.65em;
-    font-weight: bold;
     cursor: pointer;
     padding: 0;
   }
@@ -218,7 +236,7 @@ section ul li button{
 
   section ul li button.more,
   section ul li button.less {
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-weight: normal;
     color: black;
   }
@@ -226,6 +244,9 @@ section ul li button{
   section ul li button.less {
     display: none;
   }
+
+
+
 
 .footnote p{
     font-family: 'Benton Sans';

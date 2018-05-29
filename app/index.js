@@ -21,7 +21,7 @@ utilsFn({ });
 //slide function
 $(document).ready(function(){
     $(".more").click(function(){
-    	var parent = $(this).parent()
+    	var parent = $(this).parent().parent().parent()
     	parent.find('.expand').slideDown(300,function(){
 	    	parent.find(".more").hide();
 	    	parent.find(".less").show();
@@ -29,7 +29,7 @@ $(document).ready(function(){
     });
 
     $(".less").click(function(){
-        var parent = $(this).parent()
+        var parent = $(this).parent().parent().parent()
         parent.find('.expand').slideUp(500,function(){
         	parent.find(".less").hide();
         	parent.find(".more").show();
