@@ -164,8 +164,8 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
 
   section ul li{
     border-bottom: 1px solid #EEEEEE;
-  	padding-bottom: 10px;
-    margin-bottom: 10px;
+  	padding-bottom: 8px;
+    margin-bottom: 8px;
   	clear: both;
     list-style: none;
   }
@@ -179,7 +179,7 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
     margin-bottom: 20px;
   }
 
-  ul li .DFL span.party, ul li .R span.party, ul li .I span.party {
+  ul li .DFL span.party, ul li .R span.party, ul li .I span.party, ul li .G span.party{
     width: 14px;
     height: 14px;
     -moz-border-radius: 7px;
@@ -199,6 +199,10 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
   }
 
   ul li .I span.party {
+    background-color: #fee090;
+  }
+
+  ul li .G span.party{
     background-color: #fee090;
   }
 
@@ -270,13 +274,6 @@ section ul li button{
     display: none;
   }
 
-
-
-
-.footnote p{
-    font-family: 'Benton Sans';
-    font-size: .7em;
-  }
 
 footer{
 	font-size: .8em;

@@ -28,7 +28,6 @@
     <!-- GOV -->
   	<section id="G">
   		<h4>Governor</h4>
-      <div class="key">      </div>
 
       <ul>
         <% _.each(governors, (g) => { %>
@@ -54,16 +53,11 @@
         <% }) %>
       </ul>
 
-      <div class="footnote">
-        <p>Other candidates: Lance Johnson, Chris Wright, Ole Savior</p>
-<!--         <p>Former candidates: Chris Coleman, Matt Dean, Keith Downey, Tina Liebling, David Osmek, Paul Thissen</p>
- -->      </div>
   	</section>
 
     <!-- SENATE -->
   	<section id="S">
   		<h4>Senate</h4>
-	      <div class="key">	      </div>
 
         <h5>Senate (Special)</h5>
         <ul>
@@ -121,15 +115,11 @@
           <% }) %>
         </ul>
 
-      <div class="footnote">
-        <p></p>
-      </div>
   	</section>
 
     <!-- HOUSE -->
   	<section id="H">
   		<h4>House</h4>
-      <div class="key">      </div>
 
       <% _.each(_.groupBy(house, 'DISTRICT'), h => { %>
       <h5>District <%= h[0].DISTRICT %></h5>
@@ -161,15 +151,12 @@
         </ul>
         <% }) %>
 
-      <div class="footnote">
-        <p></p>
-      </div>
   	</section>
 
     <!-- FOOTER/SOURCES -->
     <footer>
-      <p>Note: Candidates who raised less than $1,000 during this cycle or no longer have active campaigns in 2018 are not included.</p>
-      <p>Contributors: C.J. Sinner, Alan Palazzolo, Matt DeLong, Pat Condon</p>
+      <p>Note: Candidates who no longer have active campaigns in 2018 are not included.</p>
+      <p>Contributors: C.J. Sinner, Alan Palazzolo, Matt DeLong, Pat Condon, J. Patrick Coolican and Ryan Fairchild, who was a University of Minnesota student reporter on assignment for the Star Tribune</p>
     </footer>
   </div>
 
