@@ -112,6 +112,24 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
     margin-bottom: 45px;
   }
 
+  section.leadin p.key{
+    padding-top: 20px;
+    font-size: .75em;
+    text-align: center;
+  }
+
+  section.leadin p.key span.keyTitle{
+    text-transform: uppercase;
+  }
+
+  section.leadin p.key span.keyIn, section.leadin p.key span.keyEnd{
+    margin-left: 10px;
+  }
+
+  section.leadin p.key span.keyEnd img{
+    width: 15px;
+  }
+
   section h4{
     font-size: 1.1em;
   }
@@ -167,7 +185,7 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
     border-radius: 7px;
     display: inline-block;
     margin-left: 7px;
-    margin-right: 7px;
+    margin-right: 4px;
   }
 
   ul li .DFL span.party{
@@ -185,6 +203,12 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
   ul li span.incumbent{
     font-weight: normal;
     font-size: .8em;
+    margin-left: 3px;
+  }
+
+  ul li span.endorse img{
+    margin-left: 3px;
+    width: 15px;
   }
 
   ul li .buttons{
@@ -202,10 +226,9 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
   }
 
   ul li .expand img{
+    width: 25%;
   	float:right;
   	padding: 0 0 10px 10px;
-  	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(100%) contrast(120%);
   }
 
   ul li .expand .extras{
@@ -256,6 +279,31 @@ section ul li button{
 footer{
 	font-size: .8em;
 }
+
+
+
+
+// For smaller screen sizes!
+
+  @media only screen and (max-width: 700px){
+    nav ul li{
+      margin-right: 5px;
+    }
+
+    nav ul li:last-child {
+      display: inline-block;
+      margin-top: 10px;
+    }
+    
+    ul li{
+      list-style: none;
+    }
+
+    ul li .expand img{
+      width: 30%;
+    }
+}
+
 
 }
 

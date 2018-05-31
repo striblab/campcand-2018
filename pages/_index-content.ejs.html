@@ -2,7 +2,7 @@
 <div class="strib strib-styles strib-styles-specifically">
   <div class="container-lg headerCC">
   	<h5 class="font-popular-light"><span  class="font-popular-medium">Election 2018</span> Candidates</h5>
-  	<h1>Who's running for office?</h1>
+  	<h1>Who’s running for Minnesota's major political offices in 2018?</h1>
   	<p class="byline">By Star Tribune Staff</p>
   	<!-- share -->
   </div>
@@ -19,23 +19,16 @@
 
     <!-- LEAD IN TEXT -->
     <section class="leadin">
-      <p>Lorem ipsum lots of lead in non-sense goes here about the candidates, and maybe with some verbal direction for using this page? </p>
+      <p>With the governor’s office, both U.S. senators and all eight U.S. House seats on the ballot in November, Minnesota is shaping up to be Ground Zero in a this year’s high-stakes midterm elections. These are the candidates running in Minnesota’s gubernatorial and congressional races.</p>
+      <p class="key">
+        <span class="keyTitle">Key:</span><span class="keyIn">(i) Incumbent</span><span class="keyEnd"><img src="http://static.startribune.com/news/projects/all/campcand-2018/assets/images/check.svg"></span>&nbsp;Party endorsed
+      </p>
     </section>
 
     <!-- GOV -->
   	<section id="G">
-  		<h4>GOVERNOR</h4>
+  		<h4>Governor</h4>
       <div class="key">      </div>
-
-<!--       <table>
-        <thead></thead>
-        <tbody>
-          <tr>
-            <td></td>
-          </tr> 
-
-        </tbody>
-      </table> -->
 
       <ul>
         <% _.each(governors, (g) => { %>
@@ -53,8 +46,7 @@
           </div>
 
           <div class="expand">
-            <img src="http://www.placepuppy.net/100/100">
-<!--             <p><em>Currently: <%= g['CURRENT GIG'] %></em></p> -->
+            <img src="http://static.startribune.com/news/projects/all/campcand-2018/assets/images/<%= g['PHOTO FILE'] %>">
             <p><%= g['BIO'] %></p>
             <p class="extras"><a href="<%= g['WEBSITE'] %>" target="_blank" rel="noopener">Website</a>&nbsp; &nbsp;<a href="http://www.startribune.com/campaign-finance-2018-minnesota-governor-tim-walz-leads-money-race-tim-pawlenty-close-behind/478334513/" target="_blank" rel="noopener">Campaign finance</a></p>
           </div>
@@ -63,14 +55,14 @@
       </ul>
 
       <div class="footnote">
-        <p>Other candidates: Lance Johnson, Chris Wright, Ole Savior.</p>
-        <p>Former candidates: Chris Coleman, Matt Dean, Keith Downey, Tina Liebling, David Osmek, Paul Thissen.</p>
-      </div>
+        <p>Other candidates: Lance Johnson, Chris Wright, Ole Savior</p>
+<!--         <p>Former candidates: Chris Coleman, Matt Dean, Keith Downey, Tina Liebling, David Osmek, Paul Thissen</p>
+ -->      </div>
   	</section>
 
     <!-- SENATE -->
   	<section id="S">
-  		<h4>SENATE</h4>
+  		<h4>Senate</h4>
 	      <div class="key">	      </div>
 
         <h5>Senate (Special)</h5>
@@ -94,9 +86,8 @@
 
 
           <div class="expand">
-            <img src="https://www.fillmurray.com/100/100">
-<!--               <p><em>Currently: <%= ss['CURRENT GIG'] %></em></p>
- -->        <p><%= ss['BIO'] %></p>
+            <img src="http://static.startribune.com/news/projects/all/campcand-2018/assets/images/<%= ss['PHOTO FILE'] %>">
+            <p><%= ss['BIO'] %></p>
             <p class="extras"><a href="<%= ss['WEBSITE'] %>" target="_blank" rel="noopener">Website</a>&nbsp; &nbsp;<a href="http://www.startribune.com/campaign-finance-2018-minnesota-us-senate-races-tina-smith-amy-klobuchar-fundraising-juggernauts-in-full-swing/478994853/" target="_blank" rel="noopener">Campaign finance</a></p>
             </div>
           </li>
@@ -122,9 +113,8 @@
           </div>
 
           <div class="expand">
-              <img src="https://placebear.com/100/100">
-<!--               <p><em>Currently: <%= s['CURRENT GIG'] %></em></p>
- -->          <p><%= s['BIO'] %></p>
+              <img src="http://static.startribune.com/news/projects/all/campcand-2018/assets/images/<%= s['PHOTO FILE'] %>">
+              <p><%= s['BIO'] %></p>
               <p class="extras"><a href="<%= s['WEBSITE'] %>" target="_blank" rel="noopener">Website</a>&nbsp; &nbsp;<a href="http://www.startribune.com/campaign-finance-2018-minnesota-us-senate-races-tina-smith-amy-klobuchar-fundraising-juggernauts-in-full-swing/478994853/" target="_blank" rel="noopener">Campaign finance</a></p>
             </div>
           </li>
@@ -138,7 +128,7 @@
 
     <!-- HOUSE -->
   	<section id="H">
-  		<h4>HOUSE</h4>
+  		<h4>House</h4>
       <div class="key">      </div>
 
       <% _.each(_.groupBy(house, 'DISTRICT'), h => { %>
@@ -152,7 +142,7 @@
               <span class="party"></span>
               <%= h['FIRST NAME'] %> <%= h['LAST NAME'] %>
               <% if (h['INCUMBENT Y/N'] === 'Y') { %><span class="incumbent">(i)</span><% } %>
-              <% if (h['PARTY ENDORSED?'] === 'Y') { %><span class="endorse">check</span><% } %>
+              <% if (h['PARTY ENDORSED?'] === 'Y') { %><span class="endorse"><img src="http://static.startribune.com/news/projects/all/campcand-2018/assets/images/check.svg"></span><% } %>
             </h6>
 
             <div class="buttons">
@@ -162,9 +152,8 @@
           </div>
 
             <div class="expand">
-              <img src="http://www.placekitten.com/100/100">
-<!--               <p><em>Currently: <%= h['CURRENT GIG'] %></em></p>
- -->          <p><%= h['BIO'] %></p>
+              <img src="http://static.startribune.com/news/projects/all/campcand-2018/assets/images/<%= h['PHOTO FILE'] %>">
+              <p><%= h['BIO'] %></p>
               <p class="extras"><a href="<%= h['WEBSITE'] %>" target="_blank" rel="noopener">Website</a>&nbsp; &nbsp;<a href="http://www.startribune.com/campaign-finance-2018-minnesota-us-senate-races-tina-smith-amy-klobuchar-fundraising-juggernauts-in-full-swing/478994853/" target="_blank" rel="noopener">Campaign finance</a></p>
             </div>
           </li>
@@ -179,6 +168,8 @@
 
     <!-- FOOTER/SOURCES -->
     <footer>
+      <p>Note: Candidates who raised less than $1,000 during this cycle or no longer have active campaigns in 2018 are not included.</p>
+      <p>Contributors: C.J. Sinner, Alan Palazzolo, Matt DeLong, Pat Condon</p>
     </footer>
   </div>
 
