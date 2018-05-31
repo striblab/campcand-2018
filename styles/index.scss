@@ -167,6 +167,7 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
   	padding-bottom: 10px;
     margin-bottom: 10px;
   	clear: both;
+    list-style: none;
   }
 
   section ul li:first-child{
@@ -294,10 +295,6 @@ footer{
     nav ul li:last-child {
       display: inline-block;
       margin-top: 10px;
-    }
-
-    ul li{
-      list-style: none;
     }
 
     ul li .expand img{
