@@ -264,10 +264,10 @@ gulp.task('server', ['build'], () => {
             let inject = fs.readFileSync(`build/${component}`, 'utf-8');
 
             // Handle rewriting any production path urls for build
-            inject = inject.replace(
-              new RegExp(config.publish.production.url, 'ig'),
-              '/'
-            );
+            // inject = inject.replace(
+            //   new RegExp(config.publish.production.url, 'ig'),
+            //   '/'
+            // );
 
             return `<div class="${id}">${inject}</div>`;
           }

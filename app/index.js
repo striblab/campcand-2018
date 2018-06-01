@@ -8,6 +8,8 @@
 
 // Dependencies
 import utilsFn from './utils.js';
+// Using own version of jQuery
+const $ = require('jquery');
 
 // Import local ES6 modules like this:
 //import utilsFn from './utils.js';
@@ -16,24 +18,32 @@ import utilsFn from './utils.js';
 // import module from 'module';
 
 // Setup utils function
-utilsFn({ });
+//utilsFn({});
+
+// Main app
+let $app = $('.strib.strib-styles.strib-styles-specifically');
 
 //slide function
-$(document).ready(function(){
-    $(".more").click(function(){
-    	var parent = $(this).parent().parent().parent()
-    	parent.find('.expand').slideDown(300,function(){
-	    	parent.find(".more").hide();
-	    	parent.find(".less").show();
-        	});
+$(document).ready(function() {
+  $app.find('.more').click(function() {
+    var parent = $(this)
+      .parent()
+      .parent()
+      .parent();
+    parent.find('.expand').slideDown(300, function() {
+      parent.find('.more').hide();
+      parent.find('.less').show();
     });
+  });
 
-    $(".less").click(function(){
-        var parent = $(this).parent().parent().parent()
-        parent.find('.expand').slideUp(500,function(){
-        	parent.find(".less").hide();
-        	parent.find(".more").show();
-        	});
+  $app.find('.less').click(function() {
+    var parent = $(this)
+      .parent()
+      .parent()
+      .parent();
+    parent.find('.expand').slideUp(500, function() {
+      parent.find('.less').hide();
+      parent.find('.more').show();
     });
-
+  });
 });
