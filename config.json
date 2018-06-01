@@ -1,27 +1,26 @@
 {
   "about this file": "This document defines configuration for this project that is not content or copy.",
   "projectIdentifier": "campcand-2018",
-
   "cms": {
     "id": "483224571",
-    "pages": ["483224571"],
-    "lcds": ["483226281"],
+    "pages": [
+      "483224571"
+    ],
+    "lcds": [
+      "483226281"
+    ],
     "rewriteMapping": {
       "article-lcd-body-content": "_index-content.html"
     }
   },
-
-
-  "content": {
-
-  },
+  "content": {},
   "publish": {
-
     "production": {
       "bucket": "static.startribune.com",
       "path": "news/projects/all/campcand-2018",
       "url": "http://static.startribune.com/news/projects/all/campcand-2018/",
       "cacheSeconds": 600
     }
-  }
+  },
+  "publishToken": "9b5c648cb4d599b3630fcccffd4d346a"
 }
