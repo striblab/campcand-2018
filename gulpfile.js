@@ -102,16 +102,16 @@ gulp.task('html:lint', ['html'], () => {
     .src('build/*.html')
     .pipe(htmlhint('.htmlhintrc'))
     .pipe(htmlhint.reporter('htmlhint-stylish'))
-    .pipe(a11y())
-    .pipe(a11y.reporter());
+    // .pipe(a11y())
+    // .pipe(a11y.reporter());
 });
 gulp.task('html:lint:details', ['html'], () => {
   return gulp
     .src('build/*.html')
     .pipe(htmlhint('.htmlhintrc'))
     .pipe(htmlhint.reporter())
-    .pipe(a11y())
-    .pipe(a11y.reporter());
+    // .pipe(a11y())
+    // .pipe(a11y.reporter());
 });
 
 // Content tasks

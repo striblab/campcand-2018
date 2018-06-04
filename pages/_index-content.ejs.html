@@ -36,7 +36,7 @@
             <h6 class="<%= g.PARTY %>">
                 <span class="party"></span>
                 <%= g['FIRST NAME'] %> <%= g['LAST NAME'] %>
-                <span class="endorse"></span>
+                <% if (g['PARTY ENDORSED?'] === 'Y') { %><span class="endorse"><img src="http://static.startribune.com/news/projects/all/campcand-2018/assets/images/check.svg"></span><% } %>
             </h6>
             <div class="buttons">
               <button class="more">+</button>
@@ -69,7 +69,7 @@
               <span class="party"></span>
               <%= ss['FIRST NAME'] %> <%= ss['LAST NAME'] %>
               <% if (ss['INCUMBENT Y/N'] === 'Y') { %><span class="incumbent">(i)</span><% } %>
-              <span class="endorse"></span>
+              <% if (ss['PARTY ENDORSED?'] === 'Y') { %><span class="endorse"><img src="http://static.startribune.com/news/projects/all/campcand-2018/assets/images/check.svg"></span><% } %>            
             </h6>
 
             <div class="buttons">
@@ -97,7 +97,7 @@
               <span class="party"></span>
               <%= s['FIRST NAME'] %> <%= s['LAST NAME'] %>
               <% if (s['INCUMBENT Y/N'] === 'Y') { %><span class="incumbent">(i)</span><% } %>
-              <span class="endorse"></span>
+              <% if (s['PARTY ENDORSED?'] === 'Y') { %><span class="endorse"><img src="http://static.startribune.com/news/projects/all/campcand-2018/assets/images/check.svg"></span><% } %>
             </h6>
 
             <div class="buttons">
