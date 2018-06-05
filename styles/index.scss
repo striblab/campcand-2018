@@ -112,6 +112,14 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
     margin-bottom: 45px;
   }
 
+  section.leadin .update{
+    text-transform: uppercase;
+    text-align: center;
+    color: red;
+    font-size: .65em;
+    margin-bottom: 20px;
+  }
+
   section.leadin p.key{
     padding-top: 20px;
     font-size: .75em;
