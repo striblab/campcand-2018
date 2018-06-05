@@ -146,7 +146,7 @@
             <div class="expand">
               <img src="http://static.startribune.com/news/projects/all/campcand-2018/assets/images/<%= h['PHOTO FILE'] %>">
               <p><%= h['BIO'] %></p>
-              <p class="extras"><a href="<%= h['WEBSITE'] %>" target="_blank" rel="noopener">Website</a>&nbsp; &nbsp;<a href="http://www.startribune.com/campaign-finance-2018-minnesota-us-house-congressional-races-among-nations-most-competitive-already-draw-millions/478994733/" target="_blank" rel="noopener">Campaign finance</a></p>
+              <p class="extras"><% if (h['WEBSITE']) { %><a href="<%= h['WEBSITE'] %>" target="_blank" rel="noopener">Website</a>&nbsp; &nbsp;<% } %><a href="http://www.startribune.com/campaign-finance-2018-minnesota-us-house-congressional-races-among-nations-most-competitive-already-draw-millions/478994733/" target="_blank" rel="noopener">Campaign finance</a></p>
             </div>
           </li>
           <% }) %>
