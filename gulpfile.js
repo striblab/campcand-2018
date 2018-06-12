@@ -60,7 +60,13 @@ gulp.task('html', async () => {
     senateSpecial:
       'https://docs.google.com/spreadsheets/d/e/2PACX-1vRXXeiHdjCfcvfqyPnfunfwNcCqcx3VLLPAvL5VqnQDQq1H2IjAOkR79I2Ubf_MuP-AgW6wUpzMNK_O/pub?gid=444380822&single=true&output=csv',
     house:
-      'https://docs.google.com/spreadsheets/d/e/2PACX-1vRXXeiHdjCfcvfqyPnfunfwNcCqcx3VLLPAvL5VqnQDQq1H2IjAOkR79I2Ubf_MuP-AgW6wUpzMNK_O/pub?gid=1149555105&single=true&output=csv'
+      'https://docs.google.com/spreadsheets/d/e/2PACX-1vRXXeiHdjCfcvfqyPnfunfwNcCqcx3VLLPAvL5VqnQDQq1H2IjAOkR79I2Ubf_MuP-AgW6wUpzMNK_O/pub?gid=1149555105&single=true&output=csv',
+    attygen:
+      'https://docs.google.com/spreadsheets/d/e/2PACX-1vRXXeiHdjCfcvfqyPnfunfwNcCqcx3VLLPAvL5VqnQDQq1H2IjAOkR79I2Ubf_MuP-AgW6wUpzMNK_O/pub?gid=610533236&single=true&output=csv',
+    secstate:
+      'https://docs.google.com/spreadsheets/d/e/2PACX-1vRXXeiHdjCfcvfqyPnfunfwNcCqcx3VLLPAvL5VqnQDQq1H2IjAOkR79I2Ubf_MuP-AgW6wUpzMNK_O/pub?gid=1692308142&single=true&output=csv',
+    auditor:
+      'https://docs.google.com/spreadsheets/d/e/2PACX-1vRXXeiHdjCfcvfqyPnfunfwNcCqcx3VLLPAvL5VqnQDQq1H2IjAOkR79I2Ubf_MuP-AgW6wUpzMNK_O/pub?gid=607561592&single=true&output=csv'
   });
 
   return gulp

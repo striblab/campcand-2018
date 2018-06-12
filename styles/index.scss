@@ -62,11 +62,15 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
 
 // Nav styles
 
-  nav {
+  nav ul{
     width: 100%;
     display: block;
     text-align: center;
     margin: 40px auto 25px auto;
+  }
+
+  nav ul.other{
+    margin-top: 10px;
   }
 
   nav ul li{
@@ -99,6 +103,7 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
   nav ul li:hover a:hover {
    color: #666;
  }
+
 
 
 // Module styles
@@ -250,6 +255,19 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
     padding-top: 0;
   }
 
+  .osr{
+    width: 50%;
+    float: left;
+  }
+
+  .osr1{
+    padding-right: 5%;
+  }
+
+  .osr2{
+    padding-left: 5%;
+  }
+
 
 // Button expanders
 
@@ -284,7 +302,9 @@ section ul li button{
 
 
 footer{
+  padding-top: 75px;
 	font-size: .8em;
+  clear: both;
 }
 
 
@@ -293,6 +313,9 @@ footer{
 // For smaller screen sizes!
 
   @media only screen and (max-width: 700px){
+    nav ul.other{
+      margin-top: 10px;
+    }
     nav ul li{
       margin-right: 5px;
     }
@@ -305,6 +328,19 @@ footer{
     ul li .expand img{
       width: 30%;
     }
+}
+
+
+  @media only screen and (max-width: 400px){
+  .osr{
+    width: 100%;
+    float: none;
+  }
+
+  .osr1, .osr2{
+    padding: 0;
+  }
+
 }
 
 

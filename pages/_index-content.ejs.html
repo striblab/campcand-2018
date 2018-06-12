@@ -14,13 +14,16 @@
       	<li><a href="#G">GOVERNOR</a></li>
         <li><a href="#S">U.S. SENATE</a></li>
       	<li><a href="#H">U.S. HOUSE</a></li>
-      </ul> 
+      </ul>
+      <ul class="other">
+        <li><a href="#O">OTHER STATE OFFICES</a></li>
+      </ul>
   	</nav>
 
     <!-- LEAD IN TEXT -->
     <section class="leadin">
       <p class="update">Updated: June 11, 2018 &mdash; 5:58 p.m.</p>
-      <p>With the governor’s office, both U.S. senators and all eight U.S. House seats on the ballot in November, Minnesota is shaping up to be Ground Zero in a this year’s high-stakes midterm elections. These are the candidates running in Minnesota’s gubernatorial and congressional races.</p>
+      <p>With the governor’s office, both U.S. senators and all eight U.S. House seats on the ballot in November, Minnesota is shaping up to be Ground Zero in a this year’s high-stakes midterm elections. These are the candidates running in Minnesota’s gubernatorial, congressional and state office races.</p>
       <p class="key">
         <span class="keyTitle">Key:</span><span class="keyIn">(i) Incumbent</span><span class="keyEnd"><img src="http://static.startribune.com/news/projects/all/campcand-2018/assets/images/check.svg"></span>&nbsp;Party endorsed
       </p>
@@ -154,6 +157,62 @@
         <% }) %>
 
   	</section>
+
+        <!-- OTHER STATE RACES -->
+    <section id="O">
+      <h4>Other state offices</h4>
+
+      <div class="osr osr1">
+        <h5>Attorney General</h5>
+        <ul>
+          <% _.each(attygen, (ag) => { %>
+          <li>
+            <div class="name">
+              <h6 class="<%= ag.PARTY %>">
+                  <span class="party"></span>
+                  <%= ag['FIRST NAME'] %> <%= ag['LAST NAME'] %>
+                  <% if (ag['PARTY ENDORSED?'] === 'Y') { %><span class="endorse"><img src="http://static.startribune.com/news/projects/all/campcand-2018/assets/images/check.svg"></span><% } %>
+              </h6>
+            </div>
+          </li>
+          <% }) %>
+        </ul>
+      </div>
+
+      <div class="osr osr2">
+        <h5>State Auditor</h5>
+        <ul>
+          <% _.each(auditor, (a) => { %>
+          <li>
+            <div class="name">
+              <h6 class="<%= a.PARTY %>">
+                  <span class="party"></span>
+                  <%= a['FIRST NAME'] %> <%= a['LAST NAME'] %>
+                  <% if (a['PARTY ENDORSED?'] === 'Y') { %><span class="endorse"><img src="http://static.startribune.com/news/projects/all/campcand-2018/assets/images/check.svg"></span><% } %>
+              </h6>
+            </div>
+          </li>
+          <% }) %>
+        </ul>
+
+        <h5>Secretary of State</h5>
+        <ul>
+          <% _.each(secstate, (sos) => { %>
+          <li>
+            <div class="name">
+              <h6 class="<%= sos.PARTY %>">
+                  <span class="party"></span>
+                  <%= sos['FIRST NAME'] %> <%= sos['LAST NAME'] %>
+                  <% if (sos['INCUMBENT Y/N'] === 'Y') { %><span class="incumbent">(i)</span><% } %>
+                  <% if (sos['PARTY ENDORSED?'] === 'Y') { %><span class="endorse"><img src="http://static.startribune.com/news/projects/all/campcand-2018/assets/images/check.svg"></span><% } %>
+              </h6>
+            </div>
+          </li>
+          <% }) %>
+        </ul>
+      </div>
+
+    </section>
 
     <!-- FOOTER/SOURCES -->
     <footer>
