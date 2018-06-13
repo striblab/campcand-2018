@@ -230,6 +230,10 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
     width: 15px;
   }
 
+  ul li.cand{
+    cursor: pointer;
+  }
+
   ul li .buttons{
     float: right;
   }
@@ -273,10 +277,9 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
 
 section ul li button{
     display: inline-block;
-    min-width: 1.2em;
+    min-width: 1.5em;
     background-color: white;
     border: none;
-    cursor: pointer;
     padding: 0;
   }
 

@@ -2,7 +2,7 @@
 <div class="strib strib-styles strib-styles-specifically">
   <div class="container-lg headerCC">
   	<h5 class="font-popular-light"><span class="font-popular-medium">Election 2018</span> Candidates</h5>
-  	<h1>Who’s running for Minnesota's major political offices in 2018?</h1>
+  	<h1>Who’s running for Minnesota’s major political offices in 2018?</h1>
   	<p class="byline">By Star Tribune Staff</p>
   	<!-- share -->
         <!-- NAVIGATION -->
@@ -33,7 +33,7 @@
 
       <ul>
         <% _.each(governors, (g) => { %>
-        <li>
+        <li class="cand">
           <div class="name">
             <h6 class="<%= g.PARTY %>">
                 <span class="party"></span>
@@ -65,7 +65,7 @@
         <h5>Senate (Special)</h5>
         <ul>
         <% _.each(senateSpecial, (ss) => { %>
-        <li>
+        <li class="cand">
 
           <div class="name">
             <h6 class="<%= ss.PARTY %>">
@@ -94,7 +94,7 @@
         <h5>Senate</h5>
         <ul>
         <% _.each(senate, (s) => { %>
-        <li>
+        <li class="cand">
           <div class="name">
             <h6 class="<%= s.PARTY %>">
               <span class="party"></span>
@@ -128,7 +128,7 @@
       <h5>District <%= h[0].DISTRICT %></h5>
       <ul>
         <% _.each(h, (h) => { %>
-        <li>
+        <li class="cand">
           
           <div class="name">
             <h6 class="<%= h.PARTY %>">

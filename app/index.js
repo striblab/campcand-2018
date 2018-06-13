@@ -25,25 +25,22 @@ let $app = $('.strib.strib-styles.strib-styles-specifically');
 
 //slide function
 $(document).ready(function() {
-  $app.find('.more').click(function() {
+  $app.find('.cand').click(function() {
     var parent = $(this)
-      .parent()
-      .parent()
-      .parent();
-    parent.find('.expand').slideDown(300, function() {
+    
+    if (!parent.hasClass("open")){
+      parent.addClass("open");
+      parent.find('.expand').slideDown(500, function() {
       parent.find('.more').hide();
       parent.find('.less').show();
     });
-  });
-
-  $app.find('.less').click(function() {
-    var parent = $(this)
-      .parent()
-      .parent()
-      .parent();
-    parent.find('.expand').slideUp(500, function() {
+  } else {
+      parent.find('.expand').slideUp(500, function() {
       parent.find('.less').hide();
       parent.find('.more').show();
-    });
+      parent.removeClass("open");
   });
+}
+
+});
 });
