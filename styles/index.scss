@@ -117,10 +117,13 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
     margin-bottom: 45px;
   }
 
-  section.leadin .update{
+  section.leadin p{
+    margin-bottom: 0;
+  }
+
+  section.leadin p.update{
     text-transform: uppercase;
     text-align: center;
-    color: red;
     font-size: .65em;
     margin-bottom: 20px;
   }
@@ -245,6 +248,7 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
   ul li .expand{
   	display: none;
     margin-bottom: 15px;
+    margin-left: 7px;
     padding-top: 10px;
   }
 
@@ -254,9 +258,14 @@ $selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
   	padding: 0 0 10px 10px;
   }
 
+  ul li .expand p{
+    margin-bottom: 15px;
+  }
+
   ul li .expand .extras{
     font-size:.8em;
     padding-top: 0;
+    margin-bottom: 5px;
   }
 
   .osr{
