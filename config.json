@@ -2,13 +2,9 @@
   "about this file": "This document defines configuration for this project that is not content or copy.",
   "projectIdentifier": "campcand-2018",
   "cms": {
-    "id": "483224571",
-    "pages": [
-      "483224571"
-    ],
-    "lcds": [
-      "483226281"
-    ],
+    "id": "489886571",
+    "pages": ["489886571"],
+    "lcds": ["489886621"],
     "rewriteMapping": {
       "article-lcd-body-content": "_index-content.html"
     }
